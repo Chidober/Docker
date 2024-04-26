@@ -1,5 +1,3 @@
-# Docker
-For Server to auto install docker
 Step 1: Download the Docker .tgz Archive
 First, you'll need to download the docker-18.09.1.tgz file. Since my environment doesn't allow me to provide direct download links or perform downloads, you should obtain this file from the official Docker website or GitHub release page, ensuring it's the correct version (18.09.1) you're after.
 wget https://download.docker.com/linux/static/stable/x86_64/docker-26.1.0.tgz
