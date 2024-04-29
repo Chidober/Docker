@@ -54,8 +54,9 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-Reload systemd to recognize the new service:
+
 ```
+Reload systemd to recognize the new service:
 ```
 sudo systemctl daemon-reload
 ```
