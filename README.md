@@ -1,14 +1,14 @@
 ### Manually install Docker engine
 Step 1: Download the Docker .tgz Archive
 
-First, you'll need to download the docker-18.09.1.tgz file. 
+First, you'll need to download the docker-26.1.0.tgz file. 
 ```sh
 wget https://download.docker.com/linux/static/stable/x86_64/docker-26.1.0.tgz
 ```
 Step 2: Extract the Archive
 Once downloaded, transfer the .tgz file to your SLES server and navigate to the directory where you've placed the file. Extract the contents using the tar command:
 ```sh
-tar xzvf docker-18.09.1.tgz
+tar xzvf docker-26.1.0.tgz
 ```
 This will extract Docker's binaries, such as dockerd (the Docker daemon), docker (the Docker client command), and others into a folder.
 
@@ -87,16 +87,17 @@ wget https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-
 Step 2: Make the Binary Executable
 Change the permissions of the binary to make it executable. You can do this with the following command:
 ```
-chmod +x docker-compose-Linux-x86_64
+chmod +x docker-compose-linux-x86_64
 ```
 Step 3: Move the Binary to a Directory in Your PATH
 Move the now-executable binary to a directory within your system’s PATH to allow it to be run from any location. A common choice is /usr/local/bin/, which is typically included in the system's PATH. You might also rename the binary to docker-compose for ease of use:
 ```
-sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 ```
 for all users:
 ```
-sudo mv docker-compose-Linux-x86_64 /usr/local/lib/docker/cli-plugins/docker-compose
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
+sudo mv docker-compose-linux-x86_64 /usr/local/lib/docker/cli-plugins/docker-compose
 ```
 Step 4: Verify the Installation
 To confirm that Docker Compose is correctly installed and accessible, run:
