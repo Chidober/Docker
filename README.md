@@ -1,3 +1,15 @@
+### quick install in Ubuntu
+```sh
+sudo apt-get update
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+sudo systemctl start docker
+
+sudo systemctl enable docker
+```
+
+
 ### Manually install Docker engine
 Step 1: Download the Docker .tgz Archive
 
